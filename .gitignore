@@ -1,0 +1,11 @@
+.venv/
+.venv-1/
+.venv-2/
+__pycache__/
+*.parquet
+train.csv
+test.csv
+test_labels.csv
+sample_submission.csv
+*.pyc
+model_metadata.json

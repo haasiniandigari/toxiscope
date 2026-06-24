@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "TOXISCOPE",
+  "version": "1.0",
+  "description": "Real-time toxic comment detector",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": [
+    "*://www.youtube.com/*",
+    "*://twitter.com/*",
+    "*://x.com/*",
+    "http://127.0.0.1:8000/*"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "*://www.youtube.com/*",
+      "*://twitter.com/*",
+      "*://x.com/*"
+    ],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
